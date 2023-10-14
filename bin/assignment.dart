@@ -15,14 +15,18 @@ void main() {
         continueFromResult();
         break;
       case '2':
+        addMultipleItemsToList(shoppingList);
         printOutList(shoppingList);
         continueFromResult();
         break;
       case '3':
-        removeItemFromList(shoppingList);
+        printOutList(shoppingList);
         continueFromResult();
         break;
       case '4':
+        removeItemFromList(shoppingList);
+        break;
+      case '5':
         print('Goodbye!');
         programOnOrOff = false;
         break;
