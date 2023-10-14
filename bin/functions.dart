@@ -15,13 +15,13 @@ void addItemToList(List<String> listName) {
 }
 
 void addMultipleItemsToList(List<String> listName) {
-  bool addOnOrOff = true;
-  while (addOnOrOff == true) {
+  bool addingToList = true;
+  while (addingToList == true) {
     print('Enter what you want to add to your list (Enter return to return to menu:');
     String itemToAdd = nullEscapeFromString();
     if (itemToAdd == 'return' || itemToAdd == 'Return') {
       print('Returning to menu');
-      addOnOrOff = false;
+      addingToList = false;
     } else {
       listName.add(itemToAdd);
       print('Adding $itemToAdd to list...');
@@ -29,8 +29,8 @@ void addMultipleItemsToList(List<String> listName) {
   }
 }
 void removeItemFromList(List<String> listName) {
-  bool removeOnOrOff = true;
-  while (removeOnOrOff == true) {
+  bool removingFromList = true;
+  while (removingFromList == true) {
     printOutList(listName);
     print('Enter what you want to remove from the list (Type return to return to menu)');
     String itemToRemove = nullEscapeFromString();
@@ -38,7 +38,7 @@ void removeItemFromList(List<String> listName) {
       listName.remove(itemToRemove);
       print('Removing $itemToRemove');
     } else if (itemToRemove == 'return' || itemToRemove == 'Return') {
-      removeOnOrOff = false;
+      removingFromList = false;
     } else {
       print('Item $itemToRemove not found in list');
     }
